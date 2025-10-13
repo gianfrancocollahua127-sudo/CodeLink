@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #e6bc49  , #cfa32b,  #aa7326);
   color: #fff;
 }
 
@@ -38,13 +38,13 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #f1c40f;
+  background: #f4f80e;
   object-fit: cover;
 }
 
 .logo h1 {
   font-size: 1.5em;
-  color: #f1c40f;
+  color: #e7dc1a;
   margin: 0;
 }
 
@@ -72,8 +72,10 @@ body {
 
 .hero h2 {
   font-size: 2.3em;
+  font-family: "Righteous", sans-serif; 
   margin-bottom: 15px;
-  color: #f1c40f;
+  color: #100d0d;
+  
 }
 
 .hero p {
@@ -100,7 +102,7 @@ body {
   font-size: 1em;
   outline: none;
   background: rgba(255, 255, 255, 0.15);
-  color: white;
+  color: rgb(62, 60, 60);
   text-align: center;
   transition: 0.3s;
 }
@@ -119,12 +121,14 @@ body {
 .contenedor {
   text-align: center;
   padding: 40px 20px;
+  
 }
 
 .contenedor h2 {
-  color: #f1c40f;
+  color: #000000  ;
   font-size: 2em;
   margin-bottom: 25px;
+  font-family: "Righteous", sans-serif;
 }
 
 .grid {
@@ -151,7 +155,7 @@ body {
 }
 
 .card h3 {
-  color: #f1c40f;
+  color: #22211e;
   font-size: 1.3em;
   margin-bottom: 10px;
 }
@@ -172,7 +176,7 @@ body {
 .btn {
   text-decoration: none;
   color: white;
-  background: #2980b9;
+  background: #ff8811;
   padding: 8px 15px;
   border-radius: 8px;
   transition: 0.2s;
@@ -196,7 +200,7 @@ body {
 .sobre h2 {
   color: #f1c40f;
   margin-bottom: 15px;
-  font-size: 2em;
+  font-size: 2em; 
 }
 
 .sobre p {
