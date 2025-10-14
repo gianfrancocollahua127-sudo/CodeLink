@@ -35,7 +35,7 @@ function mostrarEmprendimientos(filtro = "") {
 
   emprendimientos
     .filter(e => e.nombre.toLowerCase().includes(filtro.toLowerCase()))
-    .forEach(e => {
+    .forEach((e, i) => {
       const card = document.createElement("div");
       card.className = "card";
       card.innerHTML = `
@@ -47,14 +47,13 @@ function mostrarEmprendimientos(filtro = "") {
           <a href="https://www.google.com/maps/search/${encodeURIComponent(e.nombre)}" target="_blank" class="btn">Mapa</a>
         </div>
       `;
-      card.style.opacity = 0;
+
       contenedor.appendChild(card);
 
-      // animación suave
+      // ⚡ Animación escalonada
       setTimeout(() => {
-        card.style.transition = "opacity 0.5s";
-        card.style.opacity = 1;
-      }, 50);
+        card.classList.add("mostrar");
+      }, 100 * i);
     });
 }
 

@@ -46,6 +46,7 @@ body {
   font-size: 1.5em;
   color: #e7dc1a;
   margin: 0;
+  padding-left: 6px;
 }
 
 .menu a {
@@ -53,6 +54,7 @@ body {
   color: white;
   margin: 0 15px;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
   transition: 0.3s;
 }
 
@@ -74,12 +76,13 @@ body {
   font-size: 2.3em;
   font-family: "Righteous", sans-serif; 
   margin-bottom: 15px;
-  color: #100d0d;
+  color: #1b1b1b;
   
 }
 
 .hero p {
   max-width: 700px;
+  padding-top: 2vh;
   margin: 0 auto;
   font-size: 1.1em;
   line-height: 1.6;
@@ -125,7 +128,8 @@ body {
 }
 
 .contenedor h2 {
-  color: #000000  ;
+  color: #1b1b1b  ;
+  padding-bottom: 4px;
   font-size: 2em;
   margin-bottom: 25px;
   font-family: "Righteous", sans-serif;
@@ -141,17 +145,30 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.10);
   border-radius: 15px;
   padding: 25px;
   text-align: center;
-  transition: 0.3s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(0) scale(1);
+  opacity: 0;
+  transition: 
+    opacity 0.6s ease,
+    transform 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+    box-shadow 0.4s ease,
+    background-color 0.4s ease;
+  will-change: transform, box-shadow, background-color;
+  cursor: pointer;
+}
+
+.card.mostrar {
+  opacity: 1;
 }
 
 .card:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-7px);
+  transform: translateY(-10px) scale(1.05);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .card h3 {
@@ -162,7 +179,7 @@ body {
 
 .card p {
   font-size: 0.95em;
-  color: #e0e0e0;
+  color: #0f0f0f;
   margin-bottom: 15px;
 }
 
@@ -194,11 +211,12 @@ body {
 .sobre {
   background: rgba(255, 255, 255, 0.05);
   text-align: center;
-  padding: 60px 20px;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .sobre h2 {
-  color: #f1c40f;
+  color: #ffd119;
   margin-bottom: 15px;
   font-size: 2em; 
 }
@@ -208,7 +226,7 @@ body {
   margin: 0 auto;
   font-size: 1.1em;
   line-height: 1.8;
-  color: #e5e5e5;
+  color: #2b2b2b;
 }
 
 /* ----------------------------- */
