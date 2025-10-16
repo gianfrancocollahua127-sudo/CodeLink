@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Righteous&display=swap');
+
+
+/* ----------------------------- */
+/* ESTILOS GENERALES */
+/* ----------------------------- */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* evita scroll horizontal si algo sobresale */
+}
+body {
+  overflow-x: hidden;
+}
+
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #e6bc49  , #cfa32b,  #aa7326);
+  color: #fff;
+}
+
+/* ----------------------------- */
+/* ENCABEZADO Y MENÚ */
+/* ----------------------------- */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 40px;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f4f80e;
+  object-fit: cover;
+}
+
+.logo h1 {
+  font-size: 1.5em;
+  color: #e7dc1a;
+  margin: 0;
+  padding-left: 6px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #f1c40f;
+  text-shadow: 0 0 10px #f1c40f;
+}
+
+/* ----------------------------- */
+/* SECCIÓN PRINCIPAL (HERO) */
+/* ----------------------------- */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hero h2 {
+  font-size: 2.3em;
+  font-family: "Righteous", sans-serif; 
+  margin-bottom: 15px;
+  color: #1b1b1b;
+  
+}
+
+.hero p {
+  max-width: 700px;
+  padding-top: 2vh;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* ----------------------------- */
+/* BARRA DE BÚSQUEDA */
+/* ----------------------------- */
+.buscador {
+  text-align: center;
+  margin: 40px 0 10px;
+}
+
+.buscador input {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgb(62, 60, 60);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.buscador input::placeholder {
+  color: #ddd;
+}
+
+.buscador input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ----------------------------- */
+/* TARJETAS DE EMPRENDIMIENTOS */
+/* ----------------------------- */
+.contenedor {
+  text-align: center;
+  padding: 40px 20px;
+  
+}
+
+.contenedor h2 {
+  color: #1b1b1b  ;
+  padding-bottom: 4px;
+  font-size: 2em;
+  margin-bottom: 25px;
+  font-family: "Righteous", sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.10);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(0) scale(1);
+  opacity: 0;
+  transition: 
+    opacity 0.6s ease,
+    transform 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+    box-shadow 0.4s ease,
+    background-color 0.4s ease;
+  will-change: transform, box-shadow, background-color;
+  cursor: pointer;
+}
+
+.card.mostrar {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card h3 {
+  color: #22211e;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #0f0f0f;
+  margin-bottom: 15px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background: #ff8811;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: 0.2s;
+  font-size: 0.9em;
+}
+
+.btn:hover {
+  background: #f1c40f;
+  color: #333;
+}
+
+/* ----------------------------- */
+/* SECCIÓN SOBRE NOSOTROS */
+/* ----------------------------- */
+.sobre {
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.sobre h2 {
+  color: #ffd119;
+  margin-bottom: 15px;
+  font-size: 2em; 
+}
+
+.sobre p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #2b2b2b;
+}
+
+/* ----------------------------- */
+/* PIE DE PÁGINA */
+/* ----------------------------- */
+.footer {
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer-info p {
+  margin: 8px 0;
+  font-size: 0.95em;
+}
+
+.footer-copy {
+  margin-top: 15px;
+  font-size: 0.85em;
+  color: #bbb;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE */
+/* ----------------------------- */
+@media (max-width: 768px) {
+  .encabezado {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu {
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
