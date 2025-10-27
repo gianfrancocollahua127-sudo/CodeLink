@@ -12,10 +12,10 @@ function App() {
 
   return (
     <>
-      {/* 🔹 ENCABEZADO */}
+      { /* 🔹 ENCABEZADO */}
       <header className="encabezado">
         <div className="logo">
-          <img src="/coDELINK.png" alt="Logo Empresa" className="logo-img" />
+          <img src="/coDELINK.jpg" alt="Logo Empresa" className="logo-img" />
           <h1>Red de Emprendimientos</h1>
         </div>
 
