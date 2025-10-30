@@ -1,9 +1,16 @@
-export default function Emprendimientos({ subregion }) {
+export default function Emprendimientos({ subregion, setVista }) {
   return (
     <section className="contenedor fade-in">
+      <div className="volver-container">
+        <button className="btn volver" onClick={() => setVista("subregiones")}>
+          ← Volver a subregiones
+        </button>
+      </div>
+
       <div className="panel-header">
         <h2>{subregion.nombre}</h2>
       </div>
+
       <div className="grid">
         {subregion.emprendimientos.map((e, i) => (
           <div key={i} className="card mostrar fade-in">

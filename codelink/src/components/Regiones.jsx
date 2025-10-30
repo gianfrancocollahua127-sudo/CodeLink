@@ -3,6 +3,12 @@ import { regiones } from "../Data.jsx";
 export default function Regiones({ setVista, setRegionSeleccionada }) {
   return (
     <section className="contenedor fade-in">
+      <div className="volver-container">
+        <button className="btn inicio" onClick={() => setVista("inicio")}>
+          🏠 Volver al inicio
+        </button>
+      </div>
+
       <h2>Regiones</h2>
       <div className="grid">
         {regiones.map((region, i) => (
@@ -19,7 +25,6 @@ export default function Regiones({ setVista, setRegionSeleccionada }) {
           </div>
         ))}
       </div>
-      
     </section>
   );
 }

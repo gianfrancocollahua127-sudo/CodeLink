@@ -30,7 +30,7 @@ function App() {
         />
       )}
       {vista === "emprendimientos" && subregionSeleccionada && (
-        <Emprendimientos subregion={subregionSeleccionada} />
+        <Emprendimientos subregion={subregionSeleccionada} setVista={setVista} />
       )}
 
       <SobreNosotros />
