@@ -102,36 +102,6 @@ body {
 }
 
 /* ----------------------------- */
-/* BARRA DE BÚSQUEDA */
-/* ----------------------------- */
-.buscador {
-  text-align: center;
-  margin: 40px 0 10px;
-}
-
-.buscador input {
-  width: 80%;
-  max-width: 400px;
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  font-size: 1em;
-  outline: none;
-  background: rgba(255, 255, 255, 0.15);
-  color: rgb(62, 60, 60);
-  text-align: center;
-  transition: 0.3s;
-}
-
-.buscador input::placeholder {
-  color: #ddd;
-}
-
-.buscador input:focus {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* ----------------------------- */
 /* TARJETAS DE EMPRENDIMIENTOS */
 /* ----------------------------- */
 .contenedor {
@@ -281,5 +251,53 @@ body {
 
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------------------- */
+/* ANIMACIONES */
+/* ----------------------------- */
+
+/* Animación de aparición suave */
+.fade-in {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: aparecer 0.6s ease forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de transición entre vistas */
+.vista-enter {
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+.vista-exit {
+  animation: fadeSlideOut 0.4s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
   }
 }
